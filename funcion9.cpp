@@ -4,12 +4,17 @@ double factorial(int);
 int main(){
     int n;
     double s;
+    cout<<"Ingrese variable n:"<<endl;
     cin>>n;
+    while(n<0){
+        cout<<"Ingrese un numero no negativo:"<<endl;
+        cin>>n;
+    }
     s = 0;
     for(int i = 1; i <= n; i = i + 1){
         s = (factorial(i)/(2*i)) + s;
     }
-    cout<<s<<endl;
+    cout<<"La sumatoria es igual a "<<s<<endl;
     return 0;
 }
 double factorial(int a){
