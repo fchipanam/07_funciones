@@ -5,7 +5,14 @@ int main (){
     int cantidad, a1, a2, siguiente;
     a1 = 0;
     a2 = 1;
+    cout<<"       SERIE FIBONACCI"<<endl;
+    cout<<"      ------------------"<<endl;
+    cout<<"\nIngrese cantidad de terminos: ";
     cin>>cantidad;
+    while(cantidad <= 0){
+        cout<<"Ingrese una cantida no negativa";
+        cin>>cantidad;
+    }
     if (cantidad >= 1) {
         cout << a1;
         if (cantidad >= 2) {
@@ -28,11 +35,16 @@ int suma (int n){
    f0 = 0;
    f1 = 1;
    suma = 1;
-   for (int h = 2; h < n; h = h + 1){
-        next = f0 + f1;
-        suma = suma + next;
-        f0 = f1; 
-        f1 = next;
+   if (n == 1){
+    suma = 1;
+   }
+   else {
+        for (int h = 2; h < n; h = h + 1){
+            next = f0 + f1;
+            suma = suma + next;
+            f0 = f1; 
+            f1 = next;
+        }
    }
    return suma;
 }
