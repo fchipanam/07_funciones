@@ -3,7 +3,14 @@ using namespace std;
 int primo (int);
 int main (){
     int num;
+    cout<<"                SU NUMERO ES PRIMO?"<<endl;
+    cout<<"               ---------------------"<<endl;
+    cout<<"Ingrese su numero: ";
     cin>>num;
+    while (num <= 1){
+         cout<<"Ingrese un numero mayor que 1: ";
+         cin>>num;
+    }
     primo (num);
     if (primo (num) == 2){
         cout<<"Su numero es primo"<<endl;
