@@ -3,7 +3,20 @@ using namespace std;
 int divisores(int);
 int main(){
     int num1, num2;
-    cin>>num1>>num2;
+    cout<<"                  NUMEROS AMIGOS"<<endl;
+    cout<<"                 ----------------"<<endl;
+    cout<<"Ingrese primer numero (que no sea menor a 1): ";
+    cin>>num1;
+    while (num1 <= 0){
+        cout<<"Ingrese otro numero valido:";
+        cin>>num1;
+    }
+    cout<<"Ingrese segundo numero (que no sea menor a 1): ";
+    cin>>num2;
+    while (num2 <= 0){
+        cout<<"Ingrese otro numero valido: ";
+        cin>>num2;
+    }
     divisores(num1);
     divisores(num2);
     if (divisores(num1) == num2 && divisores(num2) == num1){
